@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.rowHeader{
+    height:15%; 
+    border:1px solid;
+}
+
+.rowForm{
+    height:70%; 
+    border:1px solid;
+}
+.colForm, .colImg{
+    height:100%; 
+    border:1px solid;
+}
+
+.rowSend{
+    height:10%;
+    border:1px solid;
+}
+.colFree, .colSend{
+    height:100%; 
+    border:1px solid;
+}
