@@ -37,6 +37,11 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $titulo = $validar_titulo;
+            ?>
+            <script>
+                document.getElementById('tituloLibro').value="<?php echo $titulo; ?>"
+            </script>
+            <?php
         }
 
         //regla Editorial
@@ -51,6 +56,11 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $editorial = $validar_editorial;
+            ?>
+            <script>
+                document.getElementById('editorialLibro').value="<?php echo $editorial; ?>"
+            </script>
+            <?php
         }
 
         //regla materia
@@ -65,6 +75,11 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $materia = $validar_materia;
+            ?>
+            <script>
+                document.getElementById('materiaLibro').value="<?php echo $materia; ?>"
+            </script>
+            <?php
         }
 
         //regla publicacion
@@ -79,6 +94,11 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $publicacion = $validar_publicacion;
+            ?>
+            <script>
+                document.getElementById('publicacionLibro').value="<?php echo $publicacion; ?>"
+            </script>
+            <?php
         }
 
         //regla volumen
@@ -93,6 +113,11 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $volumen = $validar_volumen;
+            ?>
+            <script>
+                document.getElementById('volumenLibro').value="<?php echo $volumen; ?>"
+            </script>
+            <?php
         }
 
         //regla cantidad
@@ -107,6 +132,11 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $cantidad = $validar_cantidad;
+            ?>
+            <script>
+                document.getElementById('cantidadLibro').value="<?php echo $cantidad; ?>"
+            </script>
+            <?php
         }
 
         //regla autor
@@ -121,6 +151,11 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $autor = $validar_autor;
+            ?>
+            <script>
+                document.getElementById('autorLibro').value="<?php echo $autor; ?>"
+            </script>
+            <?php
         }
 
         //regla idioma
@@ -135,11 +170,50 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }else{
             $idioma = $validar_idioma;
+            ?>
+            <script>
+                document.getElementById('idiomaLibro').value="<?php echo $idioma; ?>"
+            </script>
+            <?php
         }
 
     //Enviar a la db
-     
-
+        require('DB/conexion.php');
+        $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, 
+        `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`) 
+        VALUES (null,'$titulo','$isbn','$editorial','$materia',
+        '$publicacion','$volumen','$cantidad','$autor','$idioma','$comentarios')";
+        
+        if(
+            !empty($titulo) &&
+            !empty($editorial) &&
+            !empty($materia) &&
+            !empty($publicacion) &&
+            !empty($volumen) &&
+            !empty($cantidad) &&
+            !empty($autor) &&
+            !empty($idioma)
+        ){
+            $resultadoConexion = mysqli_query($con, $query);
+            if($resultadoConexion){
+                ?>
+                <script>
+                    document.getElementById('tituloLibro').value="";
+                    document.getElementById('editorialLibro').value="";
+                    document.getElementById('materiaLibro').value="";
+                    document.getElementById('publicacionLibro').value="";
+                    document.getElementById('volumenLibro').value="";
+                    document.getElementById('cantidadLibro').value="";
+                    document.getElementById('autorLibro').value="";
+                    document.getElementById('idiomaLibro').value="";
+                    document.getElementById('isbnLibro').value="";
+                    document.getElementById('comentarios').value="";
+                </script>
+                <?php
+            }else{
+                echo mysqli_error($resultadoConexion);
+            }
+        }
 }
 
 
