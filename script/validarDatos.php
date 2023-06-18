@@ -20,6 +20,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
     $validar_autor = limpiarDatos($_POST["autorLibro"]);
     $validar_idioma = limpiarDatos($_POST["idiomaLibro"]);
     $comentarios = limpiarDatos($_POST['comentariosLibro']);
+    $pattern = "/^[a-zA-Z\sñáéíóúÁÉÍÓÚ]+$/";
 
     // declaracion variable que contiene los errores
     $error;
@@ -45,7 +46,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
         }
 
         //regla Editorial
-        if(empty($validar_editorial)){
+        if(empty($validar_editorial) || !preg_match($pattern, $validar_editorial)){
             $error = 'la editorial es necesaria';
             ?>
             <script>
@@ -64,7 +65,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
         }
 
         //regla materia
-        if(empty($validar_materia)){
+        if(empty($validar_materia) || !preg_match($pattern, $validar_materia)){
             $error = 'la materia es necesaria';
             ?>
             <script>
@@ -140,7 +141,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
         }
 
         //regla autor
-        if(empty($validar_autor)){
+        if(empty($validar_autor) || !preg_match($pattern, $validar_autor)){
             $error = 'el autor es necesario';
             ?>
             <script>
@@ -179,10 +180,6 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
 
     //Enviar a la db
         require('DB/conexion.php');
-        $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, 
-        `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`) 
-        VALUES (null,'$titulo','$isbn','$editorial','$materia',
-        '$publicacion','$volumen','$cantidad','$autor','$idioma','$comentarios')";
         
         if(
             !empty($titulo) &&
@@ -194,21 +191,25 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             !empty($autor) &&
             !empty($idioma)
         ){
+            $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, 
+            `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`) 
+            VALUES (null,'$titulo','$isbn','$editorial','$materia',
+            '$publicacion','$volumen','$cantidad','$autor','$idioma','$comentarios')";
             $resultadoConexion = mysqli_query($con, $query);
             if($resultadoConexion){
                 ?>
-                <script>
-                    document.getElementById('tituloLibro').value="";
-                    document.getElementById('editorialLibro').value="";
-                    document.getElementById('materiaLibro').value="";
-                    document.getElementById('publicacionLibro').value="";
-                    document.getElementById('volumenLibro').value="";
-                    document.getElementById('cantidadLibro').value="";
-                    document.getElementById('autorLibro').value="";
-                    document.getElementById('idiomaLibro').value="";
-                    document.getElementById('isbnLibro').value="";
-                    document.getElementById('comentarios').value="";
-                </script>
+                    <script>
+                        document.getElementById('tituloLibro').value="";
+                        document.getElementById('editorialLibro').value="";
+                        document.getElementById('materiaLibro').value="";
+                        document.getElementById('publicacionLibro').value="";
+                        document.getElementById('volumenLibro').value="";
+                        document.getElementById('cantidadLibro').value="";
+                        document.getElementById('autorLibro').value="";
+                        document.getElementById('idiomaLibro').value="";
+                        document.getElementById('isbnLibro').value="";
+                        document.getElementById('comentarios').value="";
+                    </script>
                 <?php
             }else{
                 echo mysqli_error($resultadoConexion);
