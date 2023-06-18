@@ -10,6 +10,8 @@
 
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 </head>
 <body>
@@ -19,72 +21,24 @@
             
         </div>
         <!-- formulario -->
-        <form class="row rowForm" method="POST">
-            <!-- formulario texto -->
-            <div class="col-9 colForm">
-                <!-- h2 -->
-                <div class="form-row row mx-5 mt-5">
-                    <h2 class="text-center">Ficha tecnica</h2>
-                </div>
-                <!-- titulo e isbn -->
-                <div class="form-row row mx-5 mt-5">
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="tituloLibro" name="tituloLibro" placeholder="Titulo">
-                    </div>
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="isbnLibro" name="isbnLibro" placeholder="ISBN">
-                    </div>
-                </div>
-                <!-- editorial y materia -->
-                <div class="form-row row mx-5 mt-3">
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="editorialLibro" name="editorialLibro" placeholder="Editorial">
-                    </div>
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="materiaLibro" name="materiaLibro" placeholder="Materia">
-                    </div>
-                </div>
-                <!-- pub, cantidad y volumen -->
-                <div class="form-row row mx-5 mt-3">
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="publicacionLibro" name="publicacionLibro" placeholder="Año de publicacion">
-                    </div>
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="cantidadLibro" name="cantidadLibro" placeholder="Cantidad">
-                    </div>
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="volumenLibro" name="volumenLibro" placeholder="Volumen del libro">
-                    </div>
-                </div>
-                <!-- autor e idioma -->
-                <div class="form-row row mx-5 mt-3">
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="autorLibro" name="autorLibro" placeholder="Autor">
-                    </div>
-                    <div class="form-group col-md">
-                        <input type="text" class="form-control" id="idiomaLibro" name="idiomaLibro" placeholder="Idioma">
-                    </div>
-                </div>
-                <!-- comentarios -->
-                <div class="form-row row mx-5 mt-3 form-floating">
-                    <textarea class="form-control mx-auto textAreaComentarios" placeholder="Leave a comment here" id="comentarios" style="height: 200px; width:98%"></textarea>
-                    <label for="comentarios" class="ms-4">Comentarios</label>
-                </div>
-            </div>
-            <!-- formulario imagen -->
-            <div class="col-3 colImg"></div>
-        </form>
-        <!-- footer -->
-        <div class="row rowSend">
-            <div class="col-9 colFree"></div>
+        <form method="POST">
+             
+            <?php
+                include("layout/formulario.php");
+            ?>
+
+
             <!-- boton enviar -->
-            <div class="col-3 colSend">
-                <button type="button" class="btn btn-primary w-75 position-relative top-50 start-50 translate-middle">Enviar</button>
+            <div class="row justify-content-end botonesFormulario mt-3 me-3">
+                <button type="reset" class="col-1 btn btn-danger"><i class="bi bi-arrow-counterclockwise"></i></button>
+                <input type="submit" value="Enviar" class="col-2 btn btn-primary">
             </div>
-        </div>
+        </form>
+
     </div>
 
 
+    
 
 
 

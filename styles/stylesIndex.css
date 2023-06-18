@@ -2,24 +2,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
+body{
+    overflow-x: hidden;
+}
+body div{
+    background-color: rgb(248,248,248) ;
+
+}
+/* titulo */
 .rowHeader{
     height:15%; 
     border:1px solid;
 }
 
+
+/* formulario */
 .rowForm{
     height:70%; 
-    border:1px solid;
+    /* border:1px solid; */
 }
-.colForm, .colImg{
+.colForm{
     height:100%; 
-    border:1px solid;
+    /* border:1px solid; */
 }
-
+.textAreaComentarios{
+    resize: none;
+}
+/* formulario imagen */
+.formularioImagen{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 49px;
+}
+.subirImagen{
+    height: 80%;
+    width: 85%;
+    border: 3px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subirImagen label{
+    text-align: center;
+}
+#inputSubirImagen{
+    display: none;
+}
+.bi-upload{
+    font-size: 4em;
+}
+/* formulario botones */
 .rowSend{
-    height:10%;
+    height:15%;
     border:1px solid;
 }
 .colFree, .colSend{
@@ -29,6 +66,6 @@
 .form-group{
     padding: 10px
 }
-.textAreaComentarios{
-    resize: none;
+.botonesFormulario *{
+    margin: 5px;
 }
