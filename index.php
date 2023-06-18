@@ -31,11 +31,14 @@
             <!-- boton enviar -->
             <div class="row justify-content-end botonesFormulario mt-3 me-3">
                 <button type="reset" class="col-1 btn btn-danger"><i class="bi bi-arrow-counterclockwise"></i></button>
-                <input type="submit" value="Enviar" class="col-2 btn btn-primary">
+                <input type="submit" name='botonEnviarFormulario' value="Enviar" class="col-2 btn btn-primary">
             </div>
         </form>
 
     </div>
+    <?php
+        include('script/validarDatos.php')
+    ?>
 
 
     

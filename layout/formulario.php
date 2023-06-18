@@ -26,13 +26,13 @@
                     <!-- pub, cantidad y volumen -->
                     <div class="form-row row mx-5 mt-3">
                         <div class="form-group col-md">
-                            <input type="text" class="form-control" id="publicacionLibro" name="publicacionLibro" placeholder="Año de publicacion">
+                            <input type="number" min=0 class="form-control" id="publicacionLibro" name="publicacionLibro" placeholder="Año de publicacion">
                         </div>
                         <div class="form-group col-md">
-                            <input type="text" class="form-control" id="cantidadLibro" name="cantidadLibro" placeholder="Cantidad">
+                            <input type="number" min=0 class="form-control" id="volumenLibro" name="volumenLibro" placeholder="Volumen del libro">
                         </div>
                         <div class="form-group col-md">
-                            <input type="text" class="form-control" id="volumenLibro" name="volumenLibro" placeholder="Volumen del libro">
+                            <input type="number" min=0 class="form-control" id="cantidadLibro" name="cantidadLibro" placeholder="Cantidad">
                         </div>
                     </div>
                     <!-- autor e idioma -->
@@ -41,12 +41,16 @@
                             <input type="text" class="form-control" id="autorLibro" name="autorLibro" placeholder="Autor">
                         </div>
                         <div class="form-group col-md">
-                            <input type="text" class="form-control" id="idiomaLibro" name="idiomaLibro" placeholder="Idioma">
+                            <select name="idiomaLibro" id="idiomaLibro" class="form-select">
+                                <option value="">Idioma</option>
+                                <option value="1">Español</option>
+                                <option value="2">Ingles</option>
+                            </select>
                         </div>
                     </div>
                     <!-- comentarios -->
                     <div class="form-row row mx-5 mt-3 mb-5 form-floating">
-                        <textarea class="form-control mx-auto textAreaComentarios" placeholder="Leave a comment here" id="comentarios" style="height: 200px; width:98%"></textarea>
+                        <textarea class="form-control mx-auto textAreaComentarios" placeholder="Leave a comment here" id="comentarios" name='comentariosLibro' style="height: 200px; width:98%"></textarea>
                         <label for="comentarios" class="ms-4">Comentarios</label>
                     </div>
                 </div>
