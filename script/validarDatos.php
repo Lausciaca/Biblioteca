@@ -209,6 +209,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
                         document.getElementById('idiomaLibro').value="";
                         document.getElementById('isbnLibro').value="";
                         document.getElementById('comentarios').value="";
+                        document.getElementById('alertaCorrecto').style.display = "block";
                     </script>
                 <?php
             }else{

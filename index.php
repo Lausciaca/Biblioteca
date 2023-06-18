@@ -29,9 +29,13 @@
 
 
             <!-- boton enviar -->
-            <div class="row justify-content-end botonesFormulario mt-3 me-3">
-                <button type="reset" class="col-1 btn btn-danger"><i class="bi bi-arrow-counterclockwise"></i></button>
-                <input type="submit" name='botonEnviarFormulario' value="Enviar" class="col-2 btn btn-primary">
+            <div class="row justify-content-end botonesFormulario mt-3 me-3 ms-5">
+                <div class="alert alert-success alert-dismissible col-8 me-auto alertaCorrecto" id="alertaCorrecto">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Datos agregados!</strong> se han enviado correctamente a la base de datos.
+                </div>
+                <button type="reset" class="col-1 btn btn-danger h-100"><i class="bi bi-arrow-counterclockwise"></i></button>
+                <input type="submit" name='botonEnviarFormulario' value="Enviar" class="col-2 btn btn-primary h-100">
             </div>
         </form>
 
@@ -44,9 +48,12 @@
     
 
 
-
+    
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- scripts externos -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- scripts custom -->
     <script src="script/evitarReenvio.js"></script>
 
