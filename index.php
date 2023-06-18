@@ -37,7 +37,7 @@
 
     </div>
     <?php
-        include('script/validarDatos.php')
+        include('script/validarDatos.php');
     ?>
 
 
