@@ -58,6 +58,7 @@ body div{
         justify-content: center;
         min-width: 90%;
         margin: 0 auto;
+        height: 160px;
     }
     .containerBotones *{
         width: 100%;
