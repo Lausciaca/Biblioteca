@@ -21,6 +21,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
     $validar_idioma = limpiarDatos($_POST["idiomaLibro"]);
     $comentarios = limpiarDatos($_POST['comentariosLibro']);
     $pattern = "/^[a-zA-Z\sñáéíóúÁÉÍÓÚ]+$/";
+    
 
     // declaracion variable que contiene los errores
     $error;
@@ -178,6 +179,8 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }
 
+        
+
     //Enviar a la db
         require('DB/conexion.php');
         
@@ -190,11 +193,13 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             !empty($cantidad) &&
             !empty($autor) &&
             !empty($idioma)
-        ){
+            ){
+
             $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, 
             `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`) 
             VALUES (null,'$titulo','$isbn','$editorial','$materia',
             '$publicacion','$volumen','$cantidad','$autor','$idioma','$comentarios')";
+
             $resultadoConexion = mysqli_query($con, $query);
             if($resultadoConexion){
                 ?>
@@ -210,13 +215,13 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
                         document.getElementById('isbnLibro').value="";
                         document.getElementById('comentarios').value="";
                         document.getElementById('alertaCorrecto').style.display = "block";
-                    </script>
+                        </script>
                 <?php
-            }else{
-                echo mysqli_error($resultadoConexion);
             }
         }
 }
+    
+
 
 
 

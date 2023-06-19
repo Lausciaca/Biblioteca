@@ -5,10 +5,10 @@
 </style>
 <div class="row rowForm" >
                 <!-- formulario texto -->
-                <div class="col-9 colForm">
+                <div class="col colForm">
                     <!-- h2 -->
-                    <div class="form-row row mx-5 mt-5">
-                        <h2 class="text-center m-0">Ficha tecnica</h2>
+                    <div class="form-row row mx-5 mt-1">
+                        <h2 class="text-center m-0">Ficha tecnica del libro</h2>
                     </div>
                     <!-- titulo e isbn -->
                     <div class="form-row row mx-5 mt-5">
@@ -66,16 +66,6 @@
                     <div class="form-row row mx-5 mt-3 mb-5 form-floating">
                         <textarea class="form-control mx-auto textAreaComentarios" placeholder="Leave a comment here" id="comentarios" name='comentariosLibro' style="height: 200px; width:98%"></textarea>
                         <label for="comentarios" class="ms-4">Comentarios</label>
-                    </div>
-                </div>
-                <!-- formulario imagen -->
-                <div class="col-3 formularioImagen">
-                    <div class="subirImagen">
-                        <label for="inputSubirImagen">
-                            <i class="bi bi-upload"></i><br>
-                            <h4>Subir imagen (Portada)</h4>
-                        </label>
-                        <input type="file" id="inputSubirImagen" name="inputSubirImagen">
                     </div>
                 </div>
             </div>

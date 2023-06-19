@@ -17,11 +17,13 @@
 <body>
     <div style="height:100vh; border:1px solid">
         <!-- header -->
-        <div class="rowHeader">
-            
-        </div>
+        <?php
+            include('layout/navbar.php');
+        ?>
+        <?php $usuario = "rocio" ?>
+        <h3 class="text-center">¡Hola, <?php echo ucfirst($usuario) ?>!</h3>
         <!-- formulario -->
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
              
             <?php
                 include("layout/formulario.php");
@@ -30,12 +32,14 @@
 
             <!-- boton enviar -->
             <div class="row justify-content-end botonesFormulario mt-3 me-3 ms-5">
-                <div class="alert alert-success alert-dismissible col-8 me-auto alertaCorrecto" id="alertaCorrecto">
+                <div class="col-8 alert alert-success alert-dismissible me-auto alertaCorrecto" id="alertaCorrecto">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <strong>Datos agregados!</strong> se han enviado correctamente a la base de datos.
                 </div>
-                <button type="reset" class="col-1 btn btn-danger h-100"><i class="bi bi-arrow-counterclockwise"></i></button>
-                <input type="submit" name='botonEnviarFormulario' value="Enviar" class="col-2 btn btn-primary h-100">
+                <div class="col-4 d-flex justify-content-end align-items-end me-5">
+                    <button type="reset" class="btnReset btn btn-sm btn-danger h-100"><i class="bi bi-arrow-counterclockwise"></i></button>
+                    <input type="submit" name='botonEnviarFormulario' value="Enviar" class="w-50 btn btn-lg btn-primary h-100">
+                </div>
             </div>
         </form>
 
