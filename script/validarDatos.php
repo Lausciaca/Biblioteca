@@ -185,6 +185,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
         require('DB/conexion.php');
         
         if(
+            // comprobar que los campos no esten vacios
             !empty($titulo) &&
             !empty($editorial) &&
             !empty($materia) &&
@@ -194,7 +195,8 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             !empty($autor) &&
             !empty($idioma)
             ){
-
+            
+            // establecer peticion
             $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, 
             `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`) 
             VALUES (null,'$titulo','$isbn','$editorial','$materia',
@@ -204,6 +206,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             if($resultadoConexion){
                 ?>
                     <script>
+                        // vaciar campos del formulario cuando se concrete la conexion
                         document.getElementById('tituloLibro').value="";
                         document.getElementById('editorialLibro').value="";
                         document.getElementById('materiaLibro').value="";
@@ -214,6 +217,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
                         document.getElementById('idiomaLibro').value="";
                         document.getElementById('isbnLibro').value="";
                         document.getElementById('comentarios').value="";
+                        // mostrar alerta correcta
                         document.getElementById('alertaCorrecto').style.display = "block";
                         </script>
                 <?php
