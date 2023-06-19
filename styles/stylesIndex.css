@@ -17,11 +17,46 @@ body div{
     background-color: rgb(205, 202, 202);
     height: 100%;
 }
-.btnReset{
-    width: 10%;
+.botonesFormulario{
+
 }
+.containerBotones{
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    justify-content: end;
+}
+.btnReset{
+    height: 50px;
+    flex-basis: 20%;
+}
+.botonEnviarFormulario{
+    height: 50px;
+    flex-basis: 50%;
+}
+@media (max-width: 991px) {
+    .nav-item{
+        border-bottom: 1px solid;
+    }
+}
+@media (max-width: 767px) {
+    .botonesFormulario{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerBotones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 90%;
+        margin: 0 auto;
+    }
+    .containerBotones *{
+        width: 100%;
 
-
+    }
+}
 
 .close{
     text-decoration: none;
@@ -50,32 +85,7 @@ body div{
 .textAreaComentarios{
     resize: none;
 }
-/* formulario imagen */
-.formularioImagen{
-    /* border: 1px solid red; */
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin-bottom: 49px;
-}
-.subirImagen{
-    height: 80%;
-    width: 85%;
-    border: 3px dashed black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-}
-.subirImagen label{
-    text-align: center;
-}
-#inputSubirImagen{
-    display: none;
-}
-.bi-upload{
-    font-size: 4em;
-}
+
 /* formulario botones */
 .rowSend{
     height:15%;

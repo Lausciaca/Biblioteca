@@ -20,7 +20,6 @@
         <?php
             include('layout/navbar.php');
         ?>
-        <?php $usuario = "rocio" ?>
         <h3 class="text-center">¡Hola, <?php echo ucfirst($usuario) ?>!</h3>
         <!-- formulario -->
         <form method="POST" enctype="multipart/form-data">
@@ -31,14 +30,16 @@
 
 
             <!-- boton enviar -->
-            <div class="row justify-content-end botonesFormulario mt-3 me-3 ms-5">
-                <div class="col-8 alert alert-success alert-dismissible me-auto alertaCorrecto" id="alertaCorrecto">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Datos agregados!</strong> se han enviado correctamente a la base de datos.
+            <div class="row botonesFormulario">
+                <div class="col alertaCorrecto" id="alertaCorrecto">
+                    <div class="container alert alert-success alert-dismissible ms-5s" id="alertaCorrecto">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Datos agregados!</strong> se han enviado correctamente a la base de datos.
+                    </div>
                 </div>
-                <div class="col-4 d-flex justify-content-end align-items-end me-5">
-                    <button type="reset" class="btnReset btn btn-sm btn-danger h-100"><i class="bi bi-arrow-counterclockwise"></i></button>
-                    <input type="submit" name='botonEnviarFormulario' value="Enviar" class="w-50 btn btn-lg btn-primary h-100">
+                <div class="col-6 ms-auto containerBotones mx-5">
+                    <button type="reset" class="btnReset btn btn-danger miBoton"><i class="bi bi-arrow-counterclockwise"></i></button>
+                    <input type="submit" name='botonEnviarFormulario' value="Enviar" class="btn btn-primary botonEnviarFormulario miBoton">
                 </div>
             </div>
         </form>
@@ -59,6 +60,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-- scripts custom -->
+    <script src="script/botonesResponsive.js"></script>
     <script src="script/evitarReenvio.js"></script>
 
 </body>

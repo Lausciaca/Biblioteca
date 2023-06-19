@@ -8,7 +8,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse h-100" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-itemPadre">
             <li class="nav-item mx-2">
             <a class="nav-link" href="#">Base de datos <i class="bi bi-database"></i></a>
             </li>
