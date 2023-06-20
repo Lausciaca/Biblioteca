@@ -198,9 +198,9 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             
             // establecer peticion
             $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, 
-            `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`) 
+            `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`, `created_by`) 
             VALUES (null,'$titulo','$isbn','$editorial','$materia',
-            '$publicacion','$volumen','$cantidad','$autor','$idioma','$comentarios')";
+            '$publicacion','$volumen','$cantidad','$autor','$idioma','$comentarios', '$userid')";
 
             $resultadoConexion = mysqli_query($con, $query);
             if($resultadoConexion){

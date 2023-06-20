@@ -1,8 +1,8 @@
 <?php
     session_start();
     $usuario = $_SESSION['user'];
-    $id = $_SESSION['id'];
-    if(empty($id)){
+    $userid = $_SESSION['id'];
+    if(empty($userid)){
         header('location: login.php');
     }
 ?>
