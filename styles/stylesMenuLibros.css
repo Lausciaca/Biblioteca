@@ -1,0 +1,67 @@
+/* estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+}
+html {
+    min-height: 100vh;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* estilos para el navbar */
+.navegador{
+    border-bottom: 3px solid black;   
+}
+.nav-item:hover{
+    background-color: rgb(205, 202, 202);
+    height: 100%;
+}
+@media (max-width: 991px) {
+    .nav-item{
+        border-bottom: 1px solid;
+    }
+}
+
+/* estilos container */
+.container{
+    min-width: 80%;
+    height: 100%;
+}
+.seccion{
+    min-height: 100px;
+    margin: 50px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20%;
+}
+.titulo{
+    text-align: center;
+    margin: 30px auto;
+}
+.containerHijo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.seccion a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+@media (max-width: 727px){
+    .containerHijo{
+        display: flex;
+    }
+    .seccion{
+        min-width: 40%;
+    }
+}

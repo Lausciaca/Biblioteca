@@ -66,7 +66,7 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
         }
 
         //regla materia
-        if(empty($validar_materia) || !preg_match($pattern, $validar_materia)){
+        if(empty($validar_materia)){
             $error = 'la materia es necesaria';
             ?>
             <script>

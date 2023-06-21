@@ -3,7 +3,7 @@
     $usuario = $_SESSION['user'];
     $userid = $_SESSION['id'];
     if(empty($userid)){
-        header('location: login.php');
+        header('location: /Biblioteca/login.php');
     }
 ?>
 
