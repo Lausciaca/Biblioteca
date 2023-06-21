@@ -22,7 +22,7 @@
 </head>
 <body class="bg-light">
     <?php
-        include('../layout/navbar-menu-libros.php');
+        include('../layout/navbar-libro.php');
     ?>    
     <!-- texto de saludo -->
     <h3 class="text-center">¡Hola, <?php echo ucfirst($usuario) ?>!</h3>
@@ -38,38 +38,38 @@
                     </a>
                 </div>
                 <div class="seccion matematica">
-                    <a href="">
+                    <a href="matematicas.php">
                         Matematicas
                     </a>
                 </div>
                 <div class="seccion hardware">
-                    <a href="">
+                    <a href="hardware.php">
                         Hardware
                     </a>
                 </div>
                 <div class="seccion software">
-                    <a href="">
+                    <a href="software.php">
                         Software
                     </a>
                 </div>
                 <div class="seccion programacion">
-                    <a href="">
+                    <a href="programacion.php">
                         Programacion
                     </a>
                 </div>
                 <div class="seccion geografia">
-                    <a href="">
+                    <a href="geografia.php">
                         Geografia
                     </a>
                 </div>
 
                 <div class="seccion fisica">
-                    <a href="">
+                    <a href="fisica.php">
                         Fisica
                     </a>
                 </div>
                 <div class="seccion quimica">
-                    <a href="">
+                    <a href="quimica.php">
                         Quimica
                     </a>
                 </div>

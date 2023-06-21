@@ -1,8 +1,5 @@
 <nav class="navbar navbar-expand-lg navegador w-100">
   <div class="container-fluid h-100 p-0 ms-3 me-3">
-    <a class="navbar-brand" href="/Biblioteca/libros/menu-libros.php">
-        <i class="bi bi-arrow-left"></i>Volver
-    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

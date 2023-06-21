@@ -41,6 +41,14 @@ body{
     justify-content: center;
     align-items: center;
     min-width: 20%;
+    background-color: yellowgreen;
+}
+.seccion:hover{
+    background-color: rgb(111, 151, 31);
+}
+.seccion a:hover{
+    color: white;
+
 }
 .titulo{
     text-align: center;
