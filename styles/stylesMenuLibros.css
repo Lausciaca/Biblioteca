@@ -61,9 +61,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-.seccion a{
 
-}
 @media (max-width: 727px){
     .containerHijo{
         display: flex;

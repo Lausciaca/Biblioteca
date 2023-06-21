@@ -29,12 +29,11 @@
         <span id="respuesta"></span>
         <script>
             span = document.getElementById("respuesta");
-            let xhr = new XMLHttpRequest();
-            xhr.open('GET', '../script/tablaLibros.php?materia=lengua_y_literatura');
-            xhr.onload = function(e){
-                span.innerHTML = xhr.response;
-            }
-            xhr.send();
+            fetch('/Biblioteca/script/tablaLibros.php?materia=lengua_y_literatura')
+                .then(response => response.text().then(
+                    txt => span.innerHTML = (txt)
+                ))
+                .catch(err => console.log(err));
         </script>
 
     </div>
