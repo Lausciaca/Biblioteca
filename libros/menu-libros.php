@@ -32,47 +32,30 @@
                 <h2 class="titulo">BUSCAR POR MATERIA</h2>
             </div>
             <div class="containerHijo">
-                <div class="seccion lengua">
-                    <a href="lengua.php">
-                        Lengua y literatura
-                    </a>
-                </div>
-                <div class="seccion matematica">
-                    <a href="matematicas.php">
-                        Matematicas
-                    </a>
-                </div>
-                <div class="seccion hardware">
-                    <a href="hardware.php">
-                        Hardware
-                    </a>
-                </div>
-                <div class="seccion software">
-                    <a href="software.php">
-                        Software
-                    </a>
-                </div>
-                <div class="seccion programacion">
-                    <a href="programacion.php">
-                        Programacion
-                    </a>
-                </div>
-                <div class="seccion geografia">
-                    <a href="geografia.php">
-                        Geografia
-                    </a>
-                </div>
-
-                <div class="seccion fisica">
-                    <a href="fisica.php">
-                        Fisica
-                    </a>
-                </div>
-                <div class="seccion quimica">
-                    <a href="quimica.php">
-                        Quimica
-                    </a>
-                </div>
+                <a class="seccion lengua" href="lengua.php">
+                    Lengua y literatura
+                </a>
+                <a class="seccion matematica" href="matematicas.php">
+                    Matematicas
+                </a>
+                <a class="seccion hardware" href="hardware.php">
+                    Hardware
+                </a>
+                <a class="seccion software" href="software.php">
+                    Software
+                </a>
+                <a class="seccion programacion" href="programacion.php">
+                    Programacion
+                </a>
+                <a class="seccion geografia" href="geografia.php">
+                    Geografia
+                </a>
+                <a class="seccion fisica" href="fisica.php">
+                    Fisica
+                </a>
+                <a class="seccion quimica" href="quimica.php">
+                    Quimica
+                </a>
             </div>
         </div>
 

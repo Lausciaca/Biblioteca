@@ -28,7 +28,17 @@
                             <span id="errorSpanEditorial"></span>
                         </div>
                         <div class="form-group col-md">
-                            <input type="text" class="form-control" id="materiaLibro" name="materiaLibro" placeholder="Materia">
+                            <select name="materiaLibro" id="materiaLibro" class="form-select">
+                                <option value="">Materia</option>
+                                <option value="Lengua y literatura">Lengua y literatura</option>
+                                <option value="Matematicas">Matematicas</option>
+                                <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                                <option value="Programacion">Programacion</option>
+                                <option value="Geografia">Geografia</option>
+                                <option value="Fisica">Fisica</option>
+                                <option value="Quimica">Quimica</option>
+                            </select>
                             <span id="errorSpanMateria"></span>
                         </div>
                     </div>

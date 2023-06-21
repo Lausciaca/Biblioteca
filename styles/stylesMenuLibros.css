@@ -42,14 +42,15 @@ body{
     align-items: center;
     min-width: 20%;
     background-color: yellowgreen;
+    text-decoration: none;
+    color: black;
+    text-align: center;
 }
 .seccion:hover{
     background-color: rgb(111, 151, 31);
-}
-.seccion a:hover{
     color: white;
-
 }
+
 .titulo{
     text-align: center;
     margin: 30px auto;
@@ -61,9 +62,7 @@ body{
     align-items: center;
 }
 .seccion a{
-    text-decoration: none;
-    color: black;
-    text-align: center;
+
 }
 @media (max-width: 727px){
     .containerHijo{
