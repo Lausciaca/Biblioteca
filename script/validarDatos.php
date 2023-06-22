@@ -7,7 +7,6 @@ function limpiarDatos($datos){
     $datos = htmlspecialchars($datos);
     return $datos;
 }
-
 if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST'){
     // se declaran las variables
     $validar_titulo = limpiarDatos($_POST["tituloLibro"]);
@@ -22,19 +21,15 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
     $comentarios = limpiarDatos($_POST['comentariosLibro']);
     $pattern = "/^[a-zA-Z\sñáéíóúÁÉÍÓÚ]+$/";
     
-
-    // declaracion variable que contiene los errores
-    $error;
-
     //validacion de los datos
         //regla titulo
         if(empty($validar_titulo)){
             $error = 'el titulo es necesario';
             ?>
             <script>
-            let span = document.getElementById('errorSpanTitulo');
-            span.innerHTML = "<?php echo '*' . ucfirst($error);?>";
-            span.style.margin = "0 0 0 5px";
+                let span = document.getElementById('errorSpanTitulo');
+                span.innerHTML = "<?php echo '*' . ucfirst($error);?>";
+                span.style.margin = "0 0 0 5px";
             </script>
             <?php
         }else{
