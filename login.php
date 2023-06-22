@@ -16,12 +16,17 @@
 </head>
 <body>
     <div style="height:100vh; border:1px solid" class="divPadre">
-        <?php
-            include('layout/navbar-login.php');
-        ?>  
+        <nav class="navbar navbar-expand-lg navegador w-100">
+            <div class="container-fluid h-100 p-0 ms-3 me-3">
+                <a class="navbar-brand" href="http://eetp669.edu.ar/">
+                    <img src="images/logo-escuela.jpg" alt="logo" width="50px">
+                    <i class="bi bi-arrow-left"></i>Volver
+                </a>
+            </div>
+        </nav>
 
         <div class="container containerAcceso">
-            <form action="" class="formularioLogin" method="POST">
+            <form class="formularioLogin" method="POST">
                 <div class="row">
                     <h2>Acceso</h2>
                 </div>
@@ -38,15 +43,13 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input class="btn btn-primary" type="submit" value="Acceder">
+                    <input class="btn btn-primary" type="submit" value="Acceder" name="btn">
                 </div>
-                
             </form>
             <?php
                 include('script/validarLogin.php');
             ?>
         </div>
-            
     </div>
         
 
