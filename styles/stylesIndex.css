@@ -13,14 +13,7 @@ body div{
 .containerGeneral{
     height:100vh; 
 }
-/* estilos para el navbar
-.navegador{
-    border-bottom: 3px solid black;   
-}
-.nav-item:hover{
-    background-color: rgb(205, 202, 202);
-    height: 100%;
-} */
+
 
 /* Navegador */
 .navegador{
@@ -50,7 +43,7 @@ body div{
     align-items: center;
 }
 .navegadorDivR h2{
-    margin-left: 5px;
+    margin-left: 15px;
 }
 .navegadorDivRBtn{
     height: 100%;
@@ -71,78 +64,6 @@ body div{
 .navegadorDivRBtn a:hover{
     background-color: #081d57;
 }
-
-
-/* estilos para los botones del formulario */
-/* .containerBotones{
-    display: flex;
-    flex-direction: row;
-    height: inherit;
-    justify-content: end;
-}
-.btnReset{
-    height: 50px;
-    flex-basis: 20%;
-}
-.botonEnviarFormulario{
-    height: 50px;
-    flex-basis: 50%;
-}
-.botonesFormulario *{
-    margin: 5px;
-} */
-
-
-/* disenio responsive de los botones */
-/* @media (max-width: 991px) {
-    .nav-item{
-        border-bottom: 1px solid;
-    }
-}
-@media (max-width: 767px) {
-    .botonesFormulario{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .containerBotones{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-width: 90%;
-        margin: 0 auto;
-        height: 160px;
-    }
-    .containerBotones *{
-        width: 100%;
-
-    } */
-
-/* 
-frmulario
-.rowForm{
-    height:70%; 
-}
-.colForm{
-    height:100%; 
-}
-.textAreaComentarios{
-    resize: none;
-}
-
-formulario botones
-.rowSend{
-    height:15%;
-    border:1px solid;
-}
-.colFree, .colSend{
-    height:100%; 
-    border:1px solid;
-}
-.form-group{
-    padding: 10px
-}
- */
 
 
 /* formulario */
@@ -183,12 +104,28 @@ input{
     position: absolute;
     bottom: 0;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
+}
+#alertaCorrecto{
+    width: 60%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    margin: auto auto;
+    position: absolute;
+    left: 20px;
+}
+#alertaCorrecto a{
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
 }
 .botonEnviarFormulario{
     background-color: #0F2E80;
     color: white;
     height: 40%;
     margin-right: 20px;
+    position: absolute;
+    right: 0;
 }

@@ -26,27 +26,6 @@
 <body>
     <div class="containerGeneral">
         <!-- navbar -->
-        <!-- <nav class="navbar navbar-expand-lg navegador w-100">
-            <div class="container-fluid h-100 p-0 ms-3 me-3">
-                <a class="navbar-brand" href="http://eetp669.edu.ar/">
-                    <img src="images/logo-escuela.jpg" alt="logo" width="50px">
-                    <i class="bi bi-arrow-left"></i>Volver
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse h-100" id="navbarText">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-itemPadre">
-                        <li class="nav-item mx-2">
-                        <a class="nav-link" href="libros/menu-libros.php">Base de datos <i class="bi bi-database"></i></a>
-                        </li>
-                        <li class="nav-item mx-2">
-                        <a class="nav-link" href="script/validarLogout.php">Cerrar cesion <i class="bi bi-box-arrow-right"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
         <nav class="navegador">
             <div class="navegadorDiv">
                 <div class="navegadorDivL"></div>
@@ -64,29 +43,21 @@
             <!-- texto de saludo -->
             <h2 class="text-center">¡Hola, <?php echo ucfirst($usuario) ?>!</h2>
 
-            <!--
-                <div class="col alertaCorrecto" id="alertaCorrecto">
-                    <div class="container alert alert-success alert-dismissible ms-5s" id="alertaCorrecto">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Datos agregados!</strong> se han enviado correctamente a la base de datos.
-                    </div>
-                </div>
-            -->
         <form method="POST">
             <div class="row row1">
                 <div class="form-group">
                     <label for="tituloLibro"><h3>Titulo</h3></label>
-                    <input type="text" class="form-control" id="tituloLibro" name="tituloLibro">
+                    <input type="text" class="form-control" id="tituloLibro" name="tituloLibro" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label for="editorialLibro"><h3>Editorial</h3></label>
-                    <input type="text" class="form-control" id="editorialLibro" name="editorialLibro">
+                    <input type="text" class="form-control" id="editorialLibro" name="editorialLibro" autocomplete="off" required>
                 </div>
             </div>
             <div class="row row2">
                 <div class="form-group">
                     <label for="materiaLibro"><h3>Materia</h3></label>
-                    <select name="materiaLibro" id="materiaLibro" class="form-select">
+                    <select name="materiaLibro" id="materiaLibro" class="form-select" required>
                         <option value=""></option>
                         <option value="Lengua y literatura">Lengua y literatura</option>
                         <option value="Matematicas">Matematicas</option>
@@ -100,24 +71,29 @@
                 </div>
                 <div class="form-group">
                     <label for="autorLibro"><h3>Autor</h3></label>
-                    <input type="text" class="form-control" id="autorLibro" name="autorLibro">
+                    <input type="text" class="form-control" id="autorLibro" name="autorLibro" autocomplete="off" required>
                 </div>
                 <div class="form-group">
                     <label for="cantidadlLibro"><h3>Cantidad</h3></label>
-                    <input type="number" min=0 class="form-control" id="cantidadLibro" name="cantidadLibro">
+                    <input type="number" min=0 class="form-control" id="cantidadLibro" name="cantidadLibro" autocomplete="off" required>
                 </div>
             </div>
             <div class="row row3">
                 <div class="form-group">
                     <label for="isbnLibro"><h3>ISBN</h3></label>
-                    <input type="text" class="form-control" id="isbnLibro" name="isbnLibro">
+                    <input type="text" class="form-control" id="isbnLibro" name="isbnLibro" autocomplete="off" required>
                 </div>
             </div>
             <div class="row row4">
+                <div class="alert alert-success alert-dismissible" id="alertaCorrecto">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">X</a>
+                    <strong>Datos agregados!</strong>. Los datos se han enviado correctamente a la base de datos.
+                </div>
                 <button type="submit" name='botonEnviarFormulario' class="botonEnviarFormulario col-2"><h3>Enviar</h3></button>
             </div>
         </form>
-
+        
+    
 
     </div>
 
