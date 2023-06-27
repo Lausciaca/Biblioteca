@@ -24,9 +24,9 @@
 
 </head>
 <body>
-    <div style="height:100vh; border:1px solid">
+    <div class="containerGeneral">
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navegador w-100">
+        <!-- <nav class="navbar navbar-expand-lg navegador w-100">
             <div class="container-fluid h-100 p-0 ms-3 me-3">
                 <a class="navbar-brand" href="http://eetp669.edu.ar/">
                     <img src="images/logo-escuela.jpg" alt="logo" width="50px">
@@ -46,113 +46,82 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-
-        <!-- texto de saludo -->
-        <h3 class="text-center">¡Hola, <?php echo ucfirst($usuario) ?>!</h3>
-        <!-- formulario -->
-        <form method="POST" enctype="multipart/form-data">           
-        <style>
-                span{
-                    color:red;
-                }
-            </style>
-            <div class="row rowForm" >
-                <!-- formulario texto -->
-                <div class="col colForm">
-
-                    <!-- h2 -->
-                    <div class="form-row row mx-5 mt-1">
-                        <h2 class="text-center m-0">Ficha tecnica del libro</h2>
-                    </div>
-
-                    <!-- titulo e isbn -->
-                    <div class="form-row row mx-5 mt-5">
-                        <div class="form-group col-md">
-                            <input type="text" class="form-control" id="tituloLibro" name="tituloLibro" placeholder="Titulo">
-                            <span id="errorSpanTitulo"></span>
-                        </div>
-                        <div class="form-group col-md">
-                            <input type="text" class="form-control" id="isbnLibro" name="isbnLibro" placeholder="ISBN (opcional)">
-                        </div>
-                    </div>
-
-                    <!-- editorial y materia -->
-                    <div class="form-row row mx-5 mt-3">
-                        <div class="form-group col-md">
-                            <input type="text" class="form-control" id="editorialLibro" name="editorialLibro" placeholder="Editorial">
-                            <span id="errorSpanEditorial"></span>
-                        </div>
-                        <div class="form-group col-md">
-                            <select name="materiaLibro" id="materiaLibro" class="form-select">
-                                <option value="">Materia</option>
-                                <option value="Lengua y literatura">Lengua y literatura</option>
-                                <option value="Matematicas">Matematicas</option>
-                                <option value="Hardware">Hardware</option>
-                                <option value="Software">Software</option>
-                                <option value="Programacion">Programacion</option>
-                                <option value="Geografia">Geografia</option>
-                                <option value="Fisica">Fisica</option>
-                                <option value="Quimica">Quimica</option>
-                            </select>
-                            <span id="errorSpanMateria"></span>
-                        </div>
-                    </div>
-
-                    <!-- pub, cantidad y volumen -->
-                    <div class="form-row row mx-5 mt-3">
-                        <div class="form-group col-md">
-                            <input type="number" min=0 class="form-control" id="publicacionLibro" name="publicacionLibro" placeholder="Año de publicacion">
-                            <span id="errorSpanPublicacion"></span>
-                        </div>
-                        <div class="form-group col-md">
-                            <input type="number" min=0 class="form-control" id="volumenLibro" name="volumenLibro" placeholder="Volumen del libro">
-                            <span id="errorSpanVolumen"></span>
-                        </div>
-                        <div class="form-group col-md">
-                            <input type="number" min=0 class="form-control" id="cantidadLibro" name="cantidadLibro" placeholder="Cantidad">
-                            <span id="errorSpanCantidad"></span>
-                        </div>
-                    </div>
-
-                    <!-- autor e idioma -->
-                    <div class="form-row row mx-5 mt-3">
-                        <div class="form-group col-md">
-                            <input type="text" class="form-control" id="autorLibro" name="autorLibro" placeholder="Autor">
-                            <span id="errorSpanAutor"></span>
-                        </div>
-                        <div class="form-group col-md">
-                            <select name="idiomaLibro" id="idiomaLibro" class="form-select">
-                                <option value="">Idioma</option>
-                                <option value="1">Español</option>
-                                <option value="2">Ingles</option>
-                            </select>
-                            <span id="errorSpanIdioma"></span>
-                        </div>
-                    </div>
-
-                    <!-- comentarios -->
-                    <div class="form-row row mx-5 mt-3 mb-5 form-floating">
-                        <textarea class="form-control mx-auto textAreaComentarios" placeholder="Leave a comment here" id="comentarios" name='comentariosLibro' style="height: 200px; width:98%"></textarea>
-                        <label for="comentarios" class="ms-4">Comentarios</label>
+        </nav> -->
+        <nav class="navegador">
+            <div class="navegadorDiv">
+                <div class="navegadorDivL"></div>
+                <div class="navegadorDivR">
+                    <h2>Registrar libro</h2>
+                    <div class="navegadorDivRBtn ms-auto">
+                        <a class="nav-link" href="libros/menu-libros.php"><i class="bi bi-database"></i></a>
+                        <a class="nav-link" href="script/validarLogout.php"><i class="bi bi-box-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+        </nav>
 
-            <!-- botones enviar y resetear -->
-            <div class="row botonesFormulario">
+        <div class="containerForm">
+            <!-- texto de saludo -->
+            <h2 class="text-center">¡Hola, <?php echo ucfirst($usuario) ?>!</h2>
+
+            <!--
                 <div class="col alertaCorrecto" id="alertaCorrecto">
                     <div class="container alert alert-success alert-dismissible ms-5s" id="alertaCorrecto">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                         <strong>Datos agregados!</strong> se han enviado correctamente a la base de datos.
                     </div>
                 </div>
-                <div class="col-6 ms-auto containerBotones mx-5">
-                    <button type="reset" class="btnReset btn btn-danger miBoton"><i class="bi bi-arrow-counterclockwise"></i></button>
-                    <input type="submit" name='botonEnviarFormulario' value="Enviar" class="btn btn-primary botonEnviarFormulario miBoton">
+            -->
+        <form method="POST">
+            <div class="row row1">
+                <div class="form-group">
+                    <label for="tituloLibro"><h3>Titulo</h3></label>
+                    <input type="text" class="form-control" id="tituloLibro" name="tituloLibro">
+                </div>
+                <div class="form-group">
+                    <label for="editorialLibro"><h3>Editorial</h3></label>
+                    <input type="text" class="form-control" id="editorialLibro" name="editorialLibro">
                 </div>
             </div>
+            <div class="row row2">
+                <div class="form-group">
+                    <label for="materiaLibro"><h3>Materia</h3></label>
+                    <select name="materiaLibro" id="materiaLibro" class="form-select">
+                        <option value=""></option>
+                        <option value="Lengua y literatura">Lengua y literatura</option>
+                        <option value="Matematicas">Matematicas</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Software">Software</option>
+                        <option value="Programacion">Programacion</option>
+                        <option value="Geografia">Geografia</option>
+                        <option value="Fisica">Fisica</option>
+                        <option value="Quimica">Quimica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="autorLibro"><h3>Autor</h3></label>
+                    <input type="text" class="form-control" id="autorLibro" name="autorLibro">
+                </div>
+                <div class="form-group">
+                    <label for="cantidadlLibro"><h3>Cantidad</h3></label>
+                    <input type="number" min=0 class="form-control" id="cantidadLibro" name="cantidadLibro">
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="form-group">
+                    <label for="isbnLibro"><h3>ISBN</h3></label>
+                    <input type="text" class="form-control" id="isbnLibro" name="isbnLibro">
+                </div>
+            </div>
+            <div class="row row4">
+                <button type="submit" name='botonEnviarFormulario' class="botonEnviarFormulario col-2"><h3>Enviar</h3></button>
+            </div>
         </form>
+
+
+    </div>
+
+
 
     </div>
     <!-- valida los datos ingresados -->

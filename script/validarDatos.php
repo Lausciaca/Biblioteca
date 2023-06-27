@@ -13,12 +13,8 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
     $isbn = limpiarDatos($_POST["isbnLibro"]);
     $validar_editorial = limpiarDatos($_POST["editorialLibro"]);
     $validar_materia = limpiarDatos($_POST["materiaLibro"]);
-    $validar_publicacion = limpiarDatos($_POST["publicacionLibro"]);
-    $validar_volumen = limpiarDatos($_POST["volumenLibro"]);
     $validar_cantidad = limpiarDatos($_POST["cantidadLibro"]);
     $validar_autor = limpiarDatos($_POST["autorLibro"]);
-    $validar_idioma = limpiarDatos($_POST["idiomaLibro"]);
-    $comentarios = limpiarDatos($_POST['comentariosLibro']);
     $pattern = "/^[a-zA-Z\sñáéíóúÁÉÍÓÚ]+$/";
     
     //validacion de los datos
@@ -79,44 +75,6 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }
 
-        //regla publicacion
-        if(empty($validar_publicacion) || strlen($validar_publicacion) != 4){
-            $error = 'falta el año de publicacion o es invalido';
-            ?>
-            <script>
-            let span = document.getElementById('errorSpanPublicacion');
-            span.innerHTML = "<?php echo '*' . ucfirst($error);?>";
-            span.style.margin = "0 0 0 5px";
-            </script>
-            <?php
-        }else{
-            $publicacion = $validar_publicacion;
-            ?>
-            <script>
-                document.getElementById('publicacionLibro').value="<?php echo $publicacion; ?>"
-            </script>
-            <?php
-        }
-
-        //regla volumen
-        if(empty($validar_volumen) || !is_numeric($validar_volumen) ){
-            $error = 'el volumen del libro es necesario';
-            ?>
-            <script>
-            let span = document.getElementById('errorSpanVolumen');
-            span.innerHTML = "<?php echo '*' . ucfirst($error);?>";
-            span.style.margin = "0 0 0 5px";
-            </script>
-            <?php
-        }else{
-            $volumen = $validar_volumen;
-            ?>
-            <script>
-                document.getElementById('volumenLibro').value="<?php echo $volumen; ?>"
-            </script>
-            <?php
-        }
-
         //regla cantidad
         if(empty($validar_cantidad) || !is_numeric($validar_cantidad)){
             $error = 'la cantidad de libros es necesario';
@@ -155,25 +113,6 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             <?php
         }
 
-        //regla idioma
-        if(empty($validar_idioma)){
-            $error = 'el idioma es necesario';
-            ?>
-            <script>
-            let span = document.getElementById('errorSpanIdioma');
-            span.innerHTML = "<?php echo '*' . ucfirst($error);?>";
-            span.style.margin = "0 0 0 5px";
-            </script>
-            <?php
-        }else{
-            $idioma = $validar_idioma;
-            ?>
-            <script>
-                document.getElementById('idiomaLibro').value="<?php echo $idioma; ?>"
-            </script>
-            <?php
-        }
-
         
 
     //Enviar a la db
@@ -184,18 +123,13 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
             !empty($titulo) &&
             !empty($editorial) &&
             !empty($materia) &&
-            !empty($publicacion) &&
-            !empty($volumen) &&
             !empty($cantidad) &&
-            !empty($autor) &&
-            !empty($idioma)
+            !empty($autor)
             ){
             
             // establecer peticion
-            $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, 
-            `Publicacion`, `Volumen`, `Cantidad`, `Autor`, `Idioma`, `Comentarios`, `created_by`) 
-            VALUES (null,'$titulo','$isbn','$editorial','$materia',
-            '$publicacion','$volumen','$cantidad','$autor','$idioma','$comentarios', '$userid')";
+            $query = "INSERT INTO `libros`(`id`, `Titulo`, `ISBN`, `Editorial`, `Materia`, `Cantidad`, `Autor`, `created_by`) 
+            VALUES (null,'$titulo','$isbn','$editorial','$materia','$cantidad','$autor','$userid')";
 
             $resultadoConexion = mysqli_query($con, $query);
             if($resultadoConexion){
@@ -205,15 +139,9 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
                         document.getElementById('tituloLibro').value="";
                         document.getElementById('editorialLibro').value="";
                         document.getElementById('materiaLibro').value="";
-                        document.getElementById('publicacionLibro').value="";
-                        document.getElementById('volumenLibro').value="";
                         document.getElementById('cantidadLibro').value="";
                         document.getElementById('autorLibro').value="";
-                        document.getElementById('idiomaLibro').value="";
                         document.getElementById('isbnLibro').value="";
-                        document.getElementById('comentarios').value="";
-                        // mostrar alerta correcta
-                        document.getElementById('alertaCorrecto').style.display = "block";
                         </script>
                 <?php
             }

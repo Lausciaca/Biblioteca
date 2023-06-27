@@ -24,7 +24,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 40px;
+    border-radius: 20px;
 }
 form{
     display: flex;
