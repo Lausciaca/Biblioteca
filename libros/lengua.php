@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <div>
+    <div class="containerGeneral">
         <?php
             include('../layout/navbar-menu-libros.php');
         ?>
-        <h2>Libros de: Lengua y literatura</h2>
+        <h2 class="text-center">Libros de: Lengua y literatura</h2>
 
         <span id="respuesta"></span>
         <script>

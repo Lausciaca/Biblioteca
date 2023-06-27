@@ -34,6 +34,14 @@ body div{
     background-color: #38B6FF;
     height: 100%;
     width: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.navegadorDivL a{
+    color: white;
+    text-decoration: none;
 }
 .navegadorDivR{
     background-color: #0F2E80;
@@ -82,7 +90,7 @@ body div{
     width: 20%;
     height: 20%;
     background-color: #D1EAFF;
-    box-shadow: 15px 15px #081d57;
+    box-shadow: 15px 15px #16317b;
     transition: transform .2s;
 
     text-decoration: none;
