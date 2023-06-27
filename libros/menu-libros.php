@@ -19,65 +19,42 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-</head>
-<body class="bg-light">
-    <!-- navegador -->
-    <nav class="navbar navbar-expand-lg navegador w-100">
-        <div class="container-fluid h-100 p-0 ms-3 me-3">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse h-100" id="navbarText">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-itemPadre">
-                    <li class="nav-item mx-2">
-                    <a class="nav-link" href="../index.php">Formulario <i class="bi bi-file-earmark-medical"></i></i></a>
-                    </li>
-                    <li class="nav-item mx-2">
-                    <a class="nav-link" href="../script/validarLogout.php">Cerrar cesion <i class="bi bi-box-arrow-right"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- texto de saludo -->
-    <h3 class="text-center">¡Hola, <?php echo ucfirst($usuario) ?>!</h3>
-    <div class='container m-5 mt-0 mx-auto' >
-        <div class="col">
-            <div class="row">
-                <h2 class="titulo">BUSCAR POR MATERIA</h2>
-            </div>
-            <div class="containerHijo">
-                <a class="seccion lengua" href="lengua.php">
-                    Lengua y literatura
-                </a>
-                <a class="seccion matematica" href="matematicas.php">
-                    Matematicas
-                </a>
-                <a class="seccion hardware" href="hardware.php">
-                    Hardware
-                </a>
-                <a class="seccion software" href="software.php">
-                    Software
-                </a>
-                <a class="seccion programacion" href="programacion.php">
-                    Programacion
-                </a>
-                <a class="seccion geografia" href="geografia.php">
-                    Geografia
-                </a>
-                <a class="seccion fisica" href="fisica.php">
-                    Fisica
-                </a>
-                <a class="seccion quimica" href="quimica.php">
-                    Quimica
-                </a>
-            </div>
-        </div>
-
-        
-    </div>
     
+</head>
+<body>
+    <div class="containerGeneral">
+        <!-- navbar -->
+        <nav class="navegador">
+            <div class="navegadorDiv">
+                <div class="navegadorDivL"></div>
+                <div class="navegadorDivR">
+                    <h2>Buscar por materia</h2>
+                    <div class="navegadorDivRBtn ms-auto">
+                        <a class="nav-link" href="../index.php"><i class="bi bi-file-earmark-text"></i></a>
+                        <a class="nav-link" href="../script/validarLogout.php"><i class="bi bi-box-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="containerBotones">
+            <a href="lengua.php?lengua_y_literatura" class="botonLink">Lengua y literatura</a>
+            <a href="" class="botonLink">Matematica</a>
+            <a href="" class="botonLink">Geografia</a>
+            <a href="" class="botonLink">Biologia</a>
+            <a href="" class="botonLink">Hardware</a>
+            <a href="" class="botonLink">Software</a>
+            <a href="" class="botonLink">Historia</a>
+            <a href="" class="botonLink">Programacion</a>
+            <a href="" class="botonLink">Gestion</a>
+            <a href="" class="botonLink">FEyC</a>
+            <a href="" class="botonLink">Fisica</a>
+            <a href="" class="botonLink">Quimica</a>
+        </div>
+        
+
+    </div>
+
 
 
     <!-- BOOTSTRAP -->
