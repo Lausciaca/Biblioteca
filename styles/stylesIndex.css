@@ -110,7 +110,7 @@ input{
 #alertaCorrecto{
     width: 60%;
     height: 40%;
-    display: flex;
+    display: none;
     align-items: center;
     margin: auto auto;
     position: absolute;
@@ -119,7 +119,7 @@ input{
 #alertaCorrecto a{
     text-decoration: none;
     color: black;
-    margin-right: 5px;
+    margin: auto 15px;
 }
 .botonEnviarFormulario{
     background-color: #0F2E80;

@@ -142,7 +142,10 @@ if(isset($_POST['botonEnviarFormulario']) && $_SERVER['REQUEST_METHOD'] == 'POST
                         document.getElementById('cantidadLibro').value="";
                         document.getElementById('autorLibro').value="";
                         document.getElementById('isbnLibro').value="";
-                        </script>
+                        
+                        
+                        document.getElementById('alertaCorrecto').style.display = "flex";
+                    </script>
                 <?php
             }
         }
