@@ -43,6 +43,7 @@ $materiaVarURL = ucfirst(str_replace("_", " ", $_GET['materia']));
                 $autor = $row['Autor'];
                 $idioma = $row['Idioma'];
                 $direccionEliminar = "/Biblioteca/script/eliminarRegistro.php?id=$id&materia=$materia";
+                $direccionEditar = "/Biblioteca/script/editarRegistro.php?id=$id"
 
                 ?>
                     <tr>
@@ -57,7 +58,7 @@ $materiaVarURL = ucfirst(str_replace("_", " ", $_GET['materia']));
                         <td><?php echo $autor ?></td>
                         <td><?php echo $idioma ?></td>
                         <td>
-                            <a href="">
+                            <a href="<?php echo $direccionEditar ?>">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
                         </td>

@@ -15,47 +15,39 @@
 
 </head>
 <body>
-    <div style="height:100vh; border:1px solid" class="divPadre">
-        <nav class="navbar navbar-expand-lg navegador w-100">
-            <div class="container-fluid h-100 p-0 ms-3 me-3">
-                <a class="navbar-brand" href="http://eetp669.edu.ar/">
-                    <img src="images/logo-escuela.jpg" alt="logo" width="50px">
-                    <i class="bi bi-arrow-left"></i>Volver
-                </a>
-            </div>
-        </nav>
-
-        <div class="container containerAcceso">
-            <form class="formularioLogin" method="POST">
-                <div class="row">
-                    <h2>Acceso</h2>
+    <div class="containerPadre">
+        <div class="containerFormulario">
+            <form class="formularioLogin" method="POST" action="" id="formulario">
+                <h3>Usuario</h3>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+                    <input class="form-control" type="text" name="user" id="user" required>
                 </div>
-                <div class="row">
-                    <div class="input-group mb-3 mt-4">
-                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
-                        <input type="text" class="form-control" placeholder="Usuario" name="user" aria-describedby="basic-addon1" required>
-                    </div>
+                <h3>Contraseña</h3>
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
+                    <input class="form-control" type="password" id="password" name="password">
                 </div>
-                <div class="row">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
-                        <input type="password" class="form-control" placeholder="Contraseña" name="password" aria-describedby="basic-addon1" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <input class="btn btn-primary" type="submit" value="Acceder" name="btn">
+                <div class="divBoton">
+                    <input class="btn btn-lg boton text-light" type="submit" id="btn" name="btn" value="Acceder">
                 </div>
             </form>
-            <?php
-                include('script/validarLogin.php');
-            ?>
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id='alert'>
+            <button id='buttonAlert'>X</button>
+            <strong>Error!</strong><span id="spanError"></span>
         </div>
     </div>
+    <?php
+        include ('script/validarLogin.php');
+    ?>
         
-
+    <!-- script bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
     <!-- scripts custom -->
     <script src="script/evitarReenvio.js"></script>
+    <script src="script/loginCliente.js"></script>
 
 </body>
 </html>
