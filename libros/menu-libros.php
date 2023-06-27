@@ -39,7 +39,7 @@
 
         <div class="containerBotones">
             <a href="lengua.php?lengua_y_literatura" class="botonLink">Lengua y literatura</a>
-            <a href="" class="botonLink">Matematica</a>
+            <a href="matematicas.php" class="botonLink">Matematica</a>
             <a href="" class="botonLink">Geografia</a>
             <a href="" class="botonLink">Biologia</a>
             <a href="" class="botonLink">Hardware</a>
